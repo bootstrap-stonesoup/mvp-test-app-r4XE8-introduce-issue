@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-wbgn
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/bootstrap/mvp-dev-xqam-tenant/mvp-test-app/test-mvp-component-wbgn@sha256:0abe27717efb268aa57a3c40ee0b3f49f78cfba5b77ff68cc69630de9119cbf6
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
